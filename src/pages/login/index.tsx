@@ -1,3 +1,12 @@
+import { RouteProps } from '@/routeProps';
+
 export default function () {
-    return <div>登陆界面</div>
+  return <div>login.page</div>;
 }
+
+export const routeProps: RouteProps = {
+  menuData: {},
+  route: {
+    layout: false,
+  },
+};

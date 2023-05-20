@@ -5,9 +5,10 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
+  routeProps: {},
+  mfsu: false,
   layout: {
     title: '@umijs/max',
   },
   npmClient: 'pnpm',
 });
-
