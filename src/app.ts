@@ -34,6 +34,11 @@ export const layout: RunTimeLayoutConfig = () => {
     return map;
   }, [routes]);
 
+  console.log({
+    routeMap,
+    appData,
+  });
+
   return {
     logo: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
 
@@ -78,3 +83,19 @@ export const layout: RunTimeLayoutConfig = () => {
     },
   };
 };
+export function patchRoutes({ routes, routeComponents }: any) {
+  Object.values(routes).forEach((route) => {
+    if (!route.path?.startsWith('/')) {
+      route!.path = `/${route!.path}`;
+    }
+    if (route.routeConfig?.layout === false) {
+      // worked
+      delete route.parentId;
+    }
+  });
+  console.log('patchRoutes', routes, routeComponents);
+}
+
+export function patchClientRoutes(arg: any) {
+  console.log('patchClientRoutes', arg);
+}

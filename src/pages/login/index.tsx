@@ -5,8 +5,10 @@ export default function () {
 }
 
 export const routeProps: RouteProps = {
-  menuData: {},
-  route: {
+  menuData: {
+    menuRender: false,
+  },
+  routeConfig: {
     layout: false,
   },
 };

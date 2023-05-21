@@ -5,7 +5,7 @@ export default function () {
 }
 export const routeProps: RouteProps = {
   menuData: {
-    // hideInMenu: true,
+    hideInMenu: true,
     menuRender: false,
   },
 };
